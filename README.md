@@ -1,18 +1,16 @@
-TTM-Service: A TOSCA Templates marketplace and brokering RESTful service for Openastack based Cloud infrastructures
+BAKER: A TOSCA Templates marketplace and orchestration RESTful service for Openastack based Cloud infrastructures
 ==========
 
-TTM-Service  is a RESTful marketplace web service implementing marketplace solution for easily deploying TOSCA based templates  on Openstack infrastructures via OAuth2. The architecture consists of a Marketplace backend solution, a Marketplace frontend interface, and a Brokering service that accommodates marketplace requests and a client TTM Application container and application management tools for the various end-user devices/machines that will be supported. 
+BAKER-TTMOS is a RESTful marketplace web service implementing a public marketplace solutiontogether with an orchestration engine for easily deploying TOSCA based templates on top of Openstack infrastructures via OAuth2. The architecture consists of TTMOS Marketplace backend solution that includes a Brokering service that accommodates marketplace requests, together with a Marketplace frontend interface (https://github.com/NAMGroup/BAKER-TTMOS-Web), and a client application management tool (https://github.com/NAMGroup/baker-client) for the various end-user devices/machines that will be supported. 
 
-
-TTM-Service and brokering service, is a RESTful backend service build in java. Currently it runs in the Jetty container and needs MySQL to persist data. Apache CXF is used to implement the RESTful interface and Apache SHIRO as the Authentication and Authorization framework.  A java implementation for openstack API is called woorea and it is used to access resources on FIWARE Lab.
+BAKER-TTMOS is a RESTful backend service build in java. Currently it runs in the Jetty container and needs MySQL to persist data. Apache CXF is used to implement the RESTful interface and Apache SHIRO as the Authentication and Authorization framework.  A java implementation for openstack API is used called woorea to access resources on an Openstack infrastructure.
 Main offered services are:
 -	management of users and their resources
--	management of application
--	management of buns
+-	management of TOSCA archives (or TOSCA Cloud Service Archive, or “CSAR”): a package artifact that contains a TOSCA service template and other artifacts usable by a TOSCA orchestrator to deploy an application.
 -	management of the platform
--	brokering, orchestrating and provisioning on target machines
--	OAUTH2 login based to FIWARE Lab
--	Automated provisioning of machines on top of FIWARE Lab
+-	brokering, orchestrating and provisioning on target virtual machines. A so called TOSCA orchestrator (also called orchestration engine): A TOSCA processor that interprets a TOSCA service template or a TOSCA CSAR in order to instantiate and deploy the described application in a Cloud.
+-	Keystone login
+-	management of TOSCA applications
 
 
 Licenses
